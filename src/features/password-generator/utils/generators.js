@@ -31,10 +31,13 @@ export const generateDicewarePassword = ({ excludeChars, includeAmbiguous, dicew
   let attempts = 0;
   while (words.length < dicewareWordCount && attempts < 300) {
     attempts += 1;
-    let word = randomItem(DICEWARE_WORDS);
-    if (capitalizeWords) word = `${word[0].toUpperCase()}${word.slice(1)}`;
-    word = word.split("").filter((c) => !blocked.has(c)).join("");
-    if (word) words.push(word);
+    const word = randomItem(DICEWARE_WORDS);
+
+    // Keep diceware words intact: skip words containing blocked chars
+    // instead of deleting letters and producing malformed tokens.
+    if (word.split("").some((c) => blocked.has(c))) continue;
+
+    words.push(capitalizeWords ? `${word[0].toUpperCase()}${word.slice(1)}` : word);
   }
 
   if (words.length < dicewareWordCount) {

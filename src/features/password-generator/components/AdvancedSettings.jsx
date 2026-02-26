@@ -25,7 +25,7 @@ export const AdvancedSettings = ({
   setExcludeChars,
 }) => {
   return (
-    <div className="rounded-xl border bg-[#355872]/60" style={{ borderColor: theme.secondary, backgroundColor: `${theme.primary}99` }}>
+    <div className="rounded-xl border bg-[#355872]/60" style={{ borderColor: theme.border || theme.secondary, backgroundColor: `${theme.primary}99` }}>
       <button
         type="button"
         onClick={() => {
@@ -65,7 +65,7 @@ export const AdvancedSettings = ({
             onChange={(e) => setExcludeChars(e.target.value)}
             placeholder="e.g. O0Il[]{}"
             className="w-full rounded-lg border px-3 py-2 text-sm"
-            style={{ borderColor: theme.secondary, backgroundColor: theme.primary, color: theme.text }}
+            style={{ borderColor: theme.border || theme.secondary, backgroundColor: theme.primary, color: theme.text }}
           />
         </div>
       </div>

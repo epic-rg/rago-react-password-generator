@@ -11,7 +11,7 @@ export const PresetSelector = ({ activePreset, applyPreset, theme }) => {
           onClick={() => applyPreset(name)}
           className="rounded-lg border px-3 py-2 text-sm font-medium transition"
           style={{
-            borderColor: activePreset === name ? theme.tertiary : theme.secondary,
+            borderColor: activePreset === name ? theme.tertiary : theme.border || theme.secondary,
             backgroundColor: activePreset === name ? `${theme.tertiary}33` : theme.primary,
             color: theme.text,
           }}

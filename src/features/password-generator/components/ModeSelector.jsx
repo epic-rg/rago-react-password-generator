@@ -14,7 +14,7 @@ export const ModeSelector = ({ mode, setMode, theme }) => {
           onClick={() => setMode(value)}
           className="rounded-lg border px-3 py-2 text-sm font-medium transition"
           style={{
-            borderColor: mode === value ? theme.tertiary : theme.secondary,
+            borderColor: mode === value ? theme.tertiary : theme.border || theme.secondary,
             backgroundColor: mode === value ? `${theme.tertiary}33` : theme.primary,
             color: theme.text,
           }}

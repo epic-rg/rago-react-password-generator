@@ -9,7 +9,7 @@ export const Toggle = ({ label, checked, onChange, theme }) => (
     }}
     className="flex w-full items-center justify-between rounded-lg border px-3 py-2.5 text-sm transition"
     style={{
-      borderColor: theme.secondary,
+      borderColor: theme.border || theme.secondary,
       backgroundColor: `${theme.primary}B3`,
       color: theme.text,
     }}

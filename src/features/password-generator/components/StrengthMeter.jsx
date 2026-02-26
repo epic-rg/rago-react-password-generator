@@ -17,14 +17,14 @@ export const StrengthMeter = ({
   setCapitalizeWords,
 }) => {
   return (
-    <div className="mb-5 rounded-xl border p-4 sm:p-5" style={{ borderColor: theme.secondary, backgroundColor: `${theme.primary}99` }}>
+    <div className="mb-5 rounded-xl border p-4 sm:p-5" style={{ borderColor: theme.border || theme.secondary, backgroundColor: `${theme.primary}99` }}>
       <div className="mb-2 flex items-center justify-between text-xs" style={{ color: theme.tertiary }}>
         <span className="inline-flex items-center gap-1">
           Strength
           <span
             title={strength.tooltip}
             className="inline-flex h-4 w-4 items-center justify-center rounded-full border text-[10px]"
-            style={{ borderColor: theme.secondary }}
+            style={{ borderColor: theme.border || theme.secondary }}
           >
             i
           </span>
@@ -62,7 +62,7 @@ export const StrengthMeter = ({
               value={dicewareWordCount}
               onChange={(e) => setDicewareWordCount(clamp(Number(e.target.value), 3, 8))}
               className="w-full rounded-lg border px-3 py-2 text-sm"
-              style={{ borderColor: theme.secondary, backgroundColor: theme.primary, color: theme.text }}
+              style={{ borderColor: theme.border || theme.secondary, backgroundColor: theme.primary, color: theme.text }}
             />
           </div>
           <div>
@@ -72,7 +72,7 @@ export const StrengthMeter = ({
               maxLength={3}
               onChange={(e) => setSeparator(e.target.value)}
               className="w-full rounded-lg border px-3 py-2 text-sm"
-              style={{ borderColor: theme.secondary, backgroundColor: theme.primary, color: theme.text }}
+              style={{ borderColor: theme.border || theme.secondary, backgroundColor: theme.primary, color: theme.text }}
             />
           </div>
           <Toggle label="Capitalize words" checked={capitalizeWords} onChange={setCapitalizeWords} theme={theme} />

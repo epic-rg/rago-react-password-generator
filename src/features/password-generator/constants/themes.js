@@ -33,11 +33,13 @@ export const THEME_MODES = {
     secondary: "#1D5C63",
     tertiary: "#1D5C63",
     text: "#1A3C40",
+    copyText: "#EDE6DB",
   },
   slateMist: {
     label: "Slate Mist",
     primary: "#2C3E50",
     secondary: "#34495E",
+    border: "#4E647A",
     tertiary: "#ECF0F1",
     text: "#BDC3C7",
   },

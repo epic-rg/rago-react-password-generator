@@ -15,7 +15,7 @@ export const PasswordDisplay = ({
     <div
       className="mb-5 rounded-xl border p-4 transition-all duration-500"
       style={{
-        borderColor: theme.secondary,
+        borderColor: theme.border || theme.secondary,
         backgroundColor: `${theme.primary}B3`,
         boxShadow: isStrong ? `0 0 25px ${theme.tertiary}59` : undefined,
       }}
@@ -28,7 +28,7 @@ export const PasswordDisplay = ({
         value={password}
         className="w-full rounded-lg border px-4 py-3 font-mono text-lg outline-none transition focus:ring-2"
         style={{
-          borderColor: theme.secondary,
+          borderColor: theme.border || theme.secondary,
           backgroundColor: theme.primary,
           color: theme.text,
           caretColor: theme.tertiary,
@@ -41,7 +41,7 @@ export const PasswordDisplay = ({
           rippleColor={`${theme.primary}4D`}
           onClick={() => copyPassword(password)}
           className="rounded-lg px-4 py-3 text-sm font-semibold transition"
-          style={{ backgroundColor: theme.secondary, color: theme.text }}
+          style={{ backgroundColor: theme.secondary, color: theme.copyText || theme.text }}
         >
           {copied ? "Copied!" : "Copy"}
         </RippleButton>
@@ -49,13 +49,13 @@ export const PasswordDisplay = ({
           rippleColor={`${theme.text}4D`}
           onClick={generatePassword}
           className="rounded-lg border px-4 py-3 text-sm font-semibold transition"
-          style={{ borderColor: theme.secondary, backgroundColor: theme.primary, color: theme.text }}
+          style={{ borderColor: theme.border || theme.secondary, backgroundColor: theme.primary, color: theme.text }}
         >
           Regenerate
         </RippleButton>
         <div
           className="flex items-center justify-center rounded-lg border px-3 text-xs"
-          style={{ borderColor: theme.secondary, backgroundColor: theme.primary, color: theme.tertiary }}
+          style={{ borderColor: theme.border || theme.secondary, backgroundColor: theme.primary, color: theme.tertiary }}
         >
           Clipboard: {clipboardCountdown > 0 ? `${clipboardCountdown}s` : "idle"}
         </div>

@@ -4,7 +4,7 @@ import { RippleButton } from "./RippleButton";
 
 export const ThemeSection = ({ theme, themeMode, setThemeMode, themeOpen, setThemeOpen }) => {
   return (
-    <div className="mb-5 rounded-xl border" style={{ borderColor: theme.secondary, backgroundColor: `${theme.primary}99` }}>
+    <div className="mb-5 rounded-xl border" style={{ borderColor: theme.border || theme.secondary, backgroundColor: `${theme.primary}99` }}>
       <button
         type="button"
         onClick={() => {
@@ -25,7 +25,7 @@ export const ThemeSection = ({ theme, themeMode, setThemeMode, themeOpen, setThe
             onClick={() => setThemeMode(value)}
             className="rounded-lg border px-3 py-2 text-sm font-medium transition"
             style={{
-              borderColor: themeMode === value ? theme.tertiary : theme.secondary,
+              borderColor: themeMode === value ? theme.tertiary : theme.border || theme.secondary,
               backgroundColor: themeMode === value ? `${theme.tertiary}33` : theme.primary,
               color: theme.text,
             }}
