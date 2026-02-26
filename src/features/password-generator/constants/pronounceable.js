@@ -1,0 +1,28 @@
+export const PRONOUNCEABLE_CONSONANTS = [
+  "b",
+  "br",
+  "c",
+  "cr",
+  "d",
+  "dr",
+  "f",
+  "fr",
+  "g",
+  "gr",
+  "k",
+  "kr",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pr",
+  "r",
+  "s",
+  "st",
+  "t",
+  "tr",
+  "v",
+  "z",
+];
+
+export const PRONOUNCEABLE_VOWELS = ["a", "e", "i", "o", "u", "ae", "ai", "oa", "io"];
