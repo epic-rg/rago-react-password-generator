@@ -1,4 +1,4 @@
-# Password Generator (React + Vite + Tailwind)
+# 🔐 Password Generator (React + Vite + Tailwind)
 
 A production-style password generator built with React and refactored into a
 feature-based architecture for scalability and maintainability.
@@ -9,9 +9,15 @@ history, and multi-theme UI presets with persisted theme selection.
 
 ---
 
-## Features
+## 🌐 Live Preview
 
-### Password generation modes
+- <https://rago-react-password-generator.vercel.app/>
+
+---
+
+## ✨ Features
+
+### 🧩 Password generation modes
 
 - **Random**
   - Character pool controls: uppercase, lowercase, numbers, symbols
@@ -28,7 +34,7 @@ history, and multi-theme UI presets with persisted theme selection.
   - Optional number/symbol insertion
   - Exclusion-aware output filtering
 
-### Security and UX
+### 🛡️ Security and UX
 
 - Strength scoring with:
   - Entropy calculation
@@ -41,7 +47,7 @@ history, and multi-theme UI presets with persisted theme selection.
 - Optional haptic feedback (where supported)
 - Session-only password history with one-click reuse/copy
 
-### Theming
+### 🎨 Theming
 
 - Multiple theme presets (Ocean, Classic, Coral, Periwinkle, Forest Ink,
   Slate Mist, Violet Ice, Pop Art, Amber Night)
@@ -51,7 +57,7 @@ history, and multi-theme UI presets with persisted theme selection.
 
 ---
 
-## Architecture
+## 🧱 Architecture
 
 The project is organized using a **feature-based structure**:
 
@@ -67,7 +73,7 @@ src/
       index.js
 ```
 
-### Layer responsibilities
+### 📌 Layer responsibilities
 
 - `constants/` — static data only (charsets, presets, words, themes, limits)
 - `utils/` — pure helper logic (no React imports)
@@ -78,7 +84,7 @@ src/
 
 ## 📁 Key files
 
-### Constants
+### 🧮 Constants
 
 - `constants/charsets.js` — base character pools and ambiguous list
 - `constants/presets.js` — generation presets and numeric limits
@@ -86,20 +92,20 @@ src/
 - `constants/pronounceable.js` — pronounceable syllable parts
 - `constants/themes.js` — theme mode definitions
 
-### Utilities
+### 🧰 Utilities
 
 - `utils/helpers.js` — `clamp`, `randomItem`, `hexToRgba`
 - `utils/formatters.js` — crack-time formatter
 - `utils/haptics.js` — vibration utility
 - `utils/generators.js` — pure generation functions for all modes
 
-### Hooks
+### 🪝 Hooks
 
 - `hooks/usePasswordGenerator.js` — generation state + flow orchestration + theme persistence
 - `hooks/usePasswordStrength.js` — entropy/strength/crack-time model
 - `hooks/useClipboardTimeout.js` — copy workflow + secure timeout cleanup
 
-### Components
+### 🧱 Components
 
 - `components/PasswordGenerator.jsx` — feature container/composition root
 - `components/PasswordDisplay.jsx` — output, copy, regenerate, validation
@@ -114,38 +120,38 @@ src/
 
 ---
 
-## Getting started
+## 🚀 Getting started
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Node.js 18+
 - npm 9+
 
-### Install dependencies
+### 📦 Install dependencies
 
 ```bash
 npm install
 ```
 
-### Run development server
+### 🖥️ Run development server
 
 ```bash
 npm run dev
 ```
 
-### Build for production
+### 🏗️ Build for production
 
 ```bash
 npm run build
 ```
 
-### Preview production build
+### 👀 Preview production build
 
 ```bash
 npm run preview
 ```
 
-### Lint
+### 🧹 Lint
 
 ```bash
 npm run lint
@@ -153,7 +159,7 @@ npm run lint
 
 ---
 
-## Theme persistence behavior
+## 🧠 Theme persistence behavior
 
 - Storage key: `passwordGeneratorThemeMode`
 - On app load:
@@ -164,7 +170,7 @@ npm run lint
 
 ---
 
-## Tech stack
+## 🛠️ Tech stack
 
 - React 19
 - Vite 7
@@ -173,7 +179,7 @@ npm run lint
 
 ---
 
-## Notes
+## 📝 Notes
 
 - Password history is intentionally session-only (in-memory state).
 - Clipboard clearing depends on browser clipboard permissions.
@@ -181,6 +187,6 @@ npm run lint
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 - **Raghav**
