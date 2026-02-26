@@ -181,6 +181,6 @@ npm run lint
 
 ---
 
-## License
+## Author
 
-This project is for learning and development use.
+- **Raghav**
